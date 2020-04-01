@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react'
+import ApplicantTile from './ApplicantTile'
 
 const ApplicantListContainer = props => {
   const [applicants, setApplicants] = useState([])
@@ -14,15 +15,25 @@ const ApplicantListContainer = props => {
     })
     .then(response => response.json())
     .then(body => {
-      setCards(body)
+      setApplicants(body)
     })
     .catch(error => {
       console.log(`Error fetching cards: ${error.message}`)
     })
   }, [])
 
+  const applicantTiles = applicants.map((applicant) => {
+    return (
+      <ApplicantTile
+        key={applicant.id}
+        ApplicantData={applicant}
+      />
+    )
+  })
+
   return(
     <div>
+      {applicantTiles}
     </div>
   )
 }
