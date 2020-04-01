@@ -4,10 +4,11 @@ Rails.application.routes.draw do
 
   get "/", to: 'homes#index'
   get "/applicants", to: 'homes#index'
+  get "/applicants/new", to: 'homes#index'
 
 namespace :api do
     namespace :v1 do
-      resources :applicants, only: [:index] do
+      resources :applicants, only: [:index, :create] do
       end
     end
   end
