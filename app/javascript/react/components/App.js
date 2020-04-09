@@ -2,6 +2,7 @@ import React from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import WelcomePage from './WelcomePage'
 import ApplicantListContainer from './ApplicantListContainer'
+import NewApplicantContainer from './NewApplicantContainer'
 
 export const App = (props) => {
   return(

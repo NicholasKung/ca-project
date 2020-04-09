@@ -33,7 +33,9 @@ const ApplicantListContainer = props => {
 
   return(
     <div>
-      {applicantTiles}
+      <ol>
+        {applicantTiles}
+      </ol>
     </div>
   )
 }
