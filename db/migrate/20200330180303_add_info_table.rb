@@ -4,6 +4,7 @@ class AddInfoTable < ActiveRecord::Migration[5.2]
     t.string :first, null: false
     t.string :last, null: false
     t.text :description, null: false
+    t.boolean :selected, default: false
 
     t.timestamps null: false
     end
