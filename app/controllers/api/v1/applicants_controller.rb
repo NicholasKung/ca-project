@@ -13,6 +13,12 @@ class Api::V1::ApplicantsController < ApplicationController
     end
   end
 
+  def destroy
+    applicant = Applicant.find(params[:id])
+    applicant.destroy
+  end
+
+
   private
 
   def applicant_params
