@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
 namespace :api do
     namespace :v1 do
-      resources :applicants, only: [:index, :create] do
+      resources :applicants, only: [:index, :create, :destroy] do
       end
     end
   end
