@@ -40,8 +40,6 @@ const NewApplicantForm = props => {
         <label htmlFor="description">Description</label>
         <input id="description" type ="text" value={newApplicant.description} onChange={handleChange}/>
 
-
-
         <input type="submit" value="Enter"/>
       </form>
     </div>
