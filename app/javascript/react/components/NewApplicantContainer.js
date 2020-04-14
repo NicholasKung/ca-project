@@ -7,7 +7,6 @@ const NewApplicantContainer = (props) => {
 
 
   const submitNewApplicant = (formPayLoad) => {
-    debugger
     fetch('/api/v1/applicants.json', {
       credentials: "same-origin",
       method: 'POST',
