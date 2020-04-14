@@ -5,7 +5,6 @@ import NewApplicantForm from './NewApplicantForm.js'
 const NewApplicantContainer = (props) => {
   const [ applicants, setApplicants ] = useState([])
 
-
   const submitNewApplicant = (formPayLoad) => {
     fetch('/api/v1/applicants.json', {
       credentials: "same-origin",
@@ -27,7 +26,6 @@ const NewApplicantContainer = (props) => {
     })
     .then(response => response.json())
     .then(body => {
-      debugger
       setApplicants([
         ...applicants,
         body])
