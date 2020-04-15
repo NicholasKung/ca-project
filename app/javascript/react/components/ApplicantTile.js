@@ -4,10 +4,6 @@ const ApplicantTile = (props) => {
 
   const [selected, setSelected] = useState(false)
 
-  const handleCheckBoxChange = () => {
-    setSelected = true
-  }
-
 
   const isSelected = () => {
     if (props.ApplicantData.selected) {
@@ -17,12 +13,16 @@ const ApplicantTile = (props) => {
     }
   }
 
+  const handleCheckBoxChange = () => {
+    console.log("I have changed")
+  }
+
   return(
     <div>
       <ol>
         <li>Applicant Name: {props.ApplicantData.first} {props.ApplicantData.last}</li>
         <p>Description: {props.ApplicantData.description}</p>
-        <p>Selected: {isSelected()}</p>
+        <p>{isSelected()}</p>
         <input
           type="checkbox"
           name="selected"
