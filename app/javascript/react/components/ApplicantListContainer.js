@@ -22,36 +22,11 @@ const ApplicantListContainer = props => {
     })
   }, [])
 
-  const deleteApplicant = (applicantId) => {
-    fetch(`/api/v1/applicants/${applicantId}`, {
-      credentials: "same-origin",
-      method: 'DELETE',
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      }
-    })
-    .then(response => {
-      if (response.ok) {
-        return response;
-      } else {
-        let errorMessage = `${response.status} (${response.statusText})`,
-         error = new Error(errorMessage)
-        throw error
-      }
-    })
-      .then(response => response.json())
-      .then(body => {
-      })
-      .catch(error => console.error(`Error in fetch: ${error.message}`));
-  }
-
   const applicantTiles = applicants.map((applicant) => {
     return (
       <ApplicantTile
         key={applicant.id}
         ApplicantData={applicant}
-        deleteApplicant={deleteApplicant}
       />
     )
   })
