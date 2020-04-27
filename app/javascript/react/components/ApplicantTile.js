@@ -22,7 +22,7 @@ const ApplicantTile = (props) => {
       <ol>
         <li>Applicant Name: {props.ApplicantData.first} {props.ApplicantData.last}</li>
         <p>Description: {props.ApplicantData.description}</p>
-        <p>{isSelected()}</p>
+
         <input
           type="checkbox"
           name="selected"
